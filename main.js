@@ -1,5 +1,6 @@
 import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
+import Direccion from "./direccion.js"
 
 class Main {
     testFecha() {
@@ -13,6 +14,12 @@ class Main {
         console.log(tiempo.getFormato12())
         console.log(tiempo.getFormato24())
     }
+    
+    testDireccion() {
+        let direccion = new Direccion("Gral. Pablo Gonzalez", 473, 0, "Loma Bonita", 28984, "Villa de Alvarez", "Colima")
+        console.log(direccion.getFormatoCorto())
+        console.log(direccion.getFormatoLargo())
+    }
 }
 
 
@@ -20,3 +27,4 @@ class Main {
 let app = new Main
 app.testFecha()
 app.testTiempo()
+app.testDireccion()
