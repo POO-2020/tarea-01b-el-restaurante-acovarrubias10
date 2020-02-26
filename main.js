@@ -1,8 +1,9 @@
 import Fecha from "./fecha.js"
 import Tiempo from "./tiempo.js"
 import Direccion from "./direccion.js"
-import Precio from "./precio.js"
+import Precios from "./precio.js"
 import Producto from "./producto.js"
+import ElementoPedido from "./elementoPedido.js"
 
 class Main {
     testFecha() {
@@ -23,14 +24,19 @@ class Main {
         console.log(direccion.getFormatoLargo())
     }
 
-    testPrecio() {
-        let valor = new Precio(148.70)
-        console.log(valor.getPrecio())
+    testPrecios(){
+        let precio1 = new Precios(200.44)
+        console.log(precio1.getPrecios())
     }
 
     testProducto() {
-        let producto = new Producto("Pizza mexicana grande", new Precio(200.00))
+        let producto = new Producto("Pizza mexicana grande", new Precios(200.00))
         console.log(producto.getDescripcion())
+    }
+
+    testElementoPedido(){
+        let pedido1 = new ElementoPedido(new Producto("Pizza mexicana grande", new Precios (289.45)), 3)
+        console.log(pedido1.getDescripcion())
     }
 }
 
@@ -40,5 +46,6 @@ let app = new Main
 app.testFecha()
 app.testTiempo()
 app.testDireccion()
-app.testPrecio()
+app.testPrecios()
 app.testProducto()
+app.testElementoPedido()
