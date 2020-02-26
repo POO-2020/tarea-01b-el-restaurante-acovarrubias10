@@ -1,8 +1,12 @@
-export default class Precio {
-    constructor(precio) {
-        this.precio = precio
+export default class Precios{
+    /**
+     * 
+     * @param {number} valor 
+     */
+    constructor(valor){
+        this.valor = valor
     }
-    getPrecio() {
-        return  `$${parseFloat(this.precio)}`
+    getPrecios(){
+        return `$${new Intl.NumberFormat("en-UA").format(this.valor)}`
     }
 }

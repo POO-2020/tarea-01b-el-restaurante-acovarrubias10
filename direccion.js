@@ -1,13 +1,13 @@
 export default class Direccion {
-/**
- * @param calle
- * @param numeroExt
- * @param numeroInt
- * @param colonia
- * @param coPostal
- * @param municipio
- * @param ciudad
- */
+    /**
+     * @param calle
+     * @param numeroExt
+     * @param numeroInt
+     * @param colonia
+     * @param coPostal
+     * @param municipio
+     * @param ciudad
+     */
     constructor(calle, numeroExt, numeroInt, colonia, coPostal, municipio, ciudad) {
         this.calle = calle
         this.numeroExt = numeroExt

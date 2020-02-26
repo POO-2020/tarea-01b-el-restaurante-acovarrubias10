@@ -4,6 +4,9 @@ import Direccion from "./direccion.js"
 import Precios from "./precio.js"
 import Producto from "./producto.js"
 import ElementoPedido from "./elementoPedido.js"
+import Cliente from "./cliente.js"
+
+import Pedido from "./pedido.js"
 
 class Main {
     testFecha() {
@@ -38,9 +41,17 @@ class Main {
         let pedido1 = new ElementoPedido(new Producto("Pizza mexicana grande", new Precios (289.45)), 3)
         console.log(pedido1.getDescripcion())
     }
+
+    testCliente(){
+        let cliente = new Cliente("Vanessa Covarrubias Naa", new Direccion("Gral. Pablo Gonzalez", 473, 0, "Loma Bonita", 28984, "Villa de Alvarez", "Colima"), 3121434929)
+        console.log(cliente.getPerfil())
+    }
+    testPedido(){
+        let elemento1 = new ElementoPedido(new Producto("Pizza mexicana grande", new Precios (289.45)), 3)
+        this.pedido.agregarElemento(elemento2)
+        console.log(this.pedido.listarElementos())
+    }
 }
-
-
 
 let app = new Main
 app.testFecha()
@@ -49,3 +60,4 @@ app.testDireccion()
 app.testPrecios()
 app.testProducto()
 app.testElementoPedido()
+app.testCliente()
